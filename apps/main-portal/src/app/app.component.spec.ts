@@ -15,13 +15,13 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Welcome bonvy-monorepo'
+      'Welcome main-portal'
     );
   });
 
-  it(`should have as title 'bonvy-monorepo'`, () => {
+  it(`should have as title 'main-portal'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('bonvy-monorepo');
+    expect(app.title).toEqual('main-portal');
   });
 });

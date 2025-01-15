@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-nx-welcome',
   imports: [CommonModule],
+  standalone: true,
   template: `
     <!--
      * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -432,7 +433,7 @@ import { CommonModule } from '@angular/common';
         <div id="welcome">
           <h1>
             <span> Hello there, </span>
-            Welcome bonvy-monorepo 👋
+            Welcome main-portal 👋
           </h1>
         </div>
         <!--  HERO  -->
@@ -773,11 +774,11 @@ import { CommonModule } from '@angular/common';
               Build, test and lint your app
             </summary>
             <pre><span># Build</span>
-nx build 
+nx build
 <span># Test</span>
-nx test 
+nx test
 <span># Lint</span>
-nx lint 
+nx lint
 <span># Run them together!</span>
 nx run-many -t build test lint</pre>
           </details>
@@ -798,7 +799,7 @@ nx run-many -t build test lint</pre>
               </svg>
               View project details
             </summary>
-            <pre>nx show project bonvy-monorepo</pre>
+            <pre>nx show project main-portal</pre>
           </details>
 
           <details>
@@ -866,4 +867,7 @@ nx g &#64;nx/angular:component ui/src/lib/button</pre>
   styles: [],
   encapsulation: ViewEncapsulation.None,
 })
-export class NxWelcomeComponent {}
+export class NxWelcomeComponent {
+
+}
+

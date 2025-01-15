@@ -16,19 +16,19 @@
 To run the dev server for your app, use:
 
 ```sh
-npx nx serve bonvy-monorepo
+npx nx serve main-portal
 ```
 
 To create a production bundle:
 
 ```sh
-npx nx build bonvy-monorepo
+npx nx build main-portal
 ```
 
 To see all available targets to run for a project, run:
 
 ```sh
-npx nx show project bonvy-monorepo
+npx nx show project main-portal
 ```
 
 These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
