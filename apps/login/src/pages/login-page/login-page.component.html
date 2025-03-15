@@ -1,0 +1,22 @@
+
+
+<div style="display: flex; flex-direction: column">
+  <form class="example-form" [formGroup]="form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput formControlName="emailFormControl"
+             placeholder="Ex. pat@example.com">
+      <mat-hint>Errors appear instantly!</mat-hint>
+
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput formControlName="passwordFormControl"
+             placeholder="password">
+      <mat-icon>remove_red_eye</mat-icon>
+      <mat-hint>Errors appear instantly!</mat-hint>
+
+    </mat-form-field>
+    <button class="button-rem" mat-flat-button [disabled]="form.invalid" >Basic</button>
+  </form>
+</div>
