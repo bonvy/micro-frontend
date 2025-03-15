@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, Type, ViewChild, ViewContainerRef } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { loadRemoteModule } from '@angular-architects/native-federation';
 
 
 @Component({
@@ -10,5 +11,21 @@ import { RouterModule } from '@angular/router';
   styleUrl: './app.component.less',
 })
 export class AppComponent {
+
   title = 'main-portal';
+
+  @ViewChild('placeHolder', { read: ViewContainerRef })
+  viewContainer!: ViewContainerRef;
+  constructor() {
+    this.loadButton()
+  }
+
+
+
+  async loadButton(){
+    loadRemoteModule('login', './LoginButton').then(m => {
+      this.viewContainer.createComponent(m.LoginButtonComponent);
+    })
+  }
+
 }

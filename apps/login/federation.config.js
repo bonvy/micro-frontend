@@ -5,6 +5,7 @@ module.exports = withNativeFederation({
   name: 'login',
   exposes: {
     './Routes': './apps/login/src/app/app.routes.ts',
+    './LoginButton': './apps/login/src/component/login-button.component.ts',
   },
 
   shared: {
