@@ -8,7 +8,11 @@
   "targets": {
     "build": {
       "executor": "@angular-architects/native-federation:build",
-      "options": {},
+      "options": {
+        "styles": [
+          "apps/main-portal/src/custom-theme.scss"
+        ]
+      },
       "configurations": {
         "production": {
           "target": "main-portal:esbuild:production",
@@ -78,16 +82,16 @@
         "assets": [
           {
             "glob": "**/*",
-
             "input": "apps/main-portal/public"
           },
           {
-          "glob": "manifest.webmanifest",
-          "input": "src",
-          "output": "/"
+            "glob": "manifest.webmanifest",
+            "input": "src",
+            "output": "/"
           }
         ],
         "styles": [
+          "apps/main-portal/src/custom-theme.scss",
           "apps/main-portal/src/styles.less"
         ],
         "scripts": []
@@ -112,7 +116,7 @@
           "optimization": false,
           "extractLicenses": false,
           "sourceMap": true,
-          "serviceWorker": "apps/inventory/ngsw-config.json"
+          "serviceWorker": "apps/main-portal/ngsw-config.json"
         }
       },
       "defaultConfiguration": "production"

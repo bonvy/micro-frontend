@@ -8,7 +8,11 @@
   "targets": {
     "build": {
       "executor": "@angular-architects/native-federation:build",
-      "options": {},
+      "options": {
+        "styles": [
+          "apps/login/src/custom-theme.scss"
+        ]
+      },
       "configurations": {
         "production": {
           "target": "login:esbuild:production"
@@ -78,6 +82,7 @@
           }
         ],
         "styles": [
+          "apps/login/src/custom-theme.scss",
           "apps/login/src/styles.less"
         ],
         "scripts": []

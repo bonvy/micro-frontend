@@ -1,10 +1,12 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatFabButton } from '@angular/material/button';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-nx-welcome',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatFabButton, MatIcon],
   template: `
     <!--
      * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -13,6 +15,10 @@ import { CommonModule } from '@angular/common';
      Delete this file and get started with your project!
      * * * * * * * * * * * * * * * * * * * * * * * * * * * *
      -->
+    <button mat-fab extended disabled>
+      <mat-icon>favorite</mat-icon>
+      Disabled
+    </button>
     <style>
       html {
         -webkit-text-size-adjust: 100%;

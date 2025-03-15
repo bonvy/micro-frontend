@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+
+import { MatButton } from '@angular/material/button';
+import { LoginPageComponent } from '../pages/login-page/login-page.component';
+
 
 @Component({
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [ RouterModule, MatButton, LoginPageComponent],
   standalone: true,
   selector: 'app-root',
   templateUrl: './app.component.html',
